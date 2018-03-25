@@ -7,4 +7,4 @@ $bundle exe rspec to run the tests
 
 Uncomment the last two lines in /lib/Connect_four.rb and
 
-/lib$ruby Connect_four.rb to play the game
+/lib $ruby Connect_four.rb to play the game
