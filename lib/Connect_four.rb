@@ -140,5 +140,5 @@ class ConnectFour
 
 end
 
-my_game = ConnectFour.new
-my_game.start_game
+#my_game = ConnectFour.new
+#my_game.start_game
