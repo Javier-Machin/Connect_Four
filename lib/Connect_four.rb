@@ -13,8 +13,8 @@ class ConnectFour
   end
 
   def calculate_possible_lines(starting_token)
-  	x = starting_token[0]
-  	y = starting_token[1]
+    x = starting_token[0]
+    y = starting_token[1]
     possible_lines = []
     # Vertical line
     line = [[x + 0, y + 0], [x + 0, y + 1], [x + 0, y + 2], [x + 0, y + 3]] 
@@ -32,10 +32,10 @@ class ConnectFour
   end
 
   def start_game
-  	victory = false
-  	42.times do
-  	  puts "It's #{@current_player}'s turn"
-  	  puts "Select a row"
+    victory = false
+    42.times do
+      puts "It's #{@current_player}'s turn"
+      puts "Select a row"
       
       input = gets.chomp
       break if input == "exit"
@@ -62,15 +62,15 @@ class ConnectFour
   # Creates an instance of token in the desired row
   # using the number of tokens on that row to find the next free slot
   def place_token(location)
-  	location -= 1
-  	x = location
-  	y = @row_counter[location]
+    location -= 1
+    x = location
+    y = @row_counter[location]
     @board[[x, y]] = Token.new(@current_player)
     @row_counter[location] += 1
   end
 
   def check_input(input)
-  	input = valid_row?(input.to_i)
+    input = valid_row?(input.to_i)
     if input.to_i != (1..7)
       while !input.to_i.between?(1, 7)
         puts "Enter a number between 1 and 7"
@@ -125,7 +125,7 @@ class ConnectFour
 
   #Checks if any of the possible lines is all of the same color
   def player_won?
-  	victory = false
+    victory = false
     @board.each do |key, value|
       victory = calculate_possible_lines(key).any? do |line|
       	line.all? do |location|
