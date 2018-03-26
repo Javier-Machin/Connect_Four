@@ -61,7 +61,7 @@ describe ConnectFour do
 
   describe "valid_row?" do
 
-    context "when given an empty row" do
+    context "when given an invalid row" do
         
       it "returns 9" do
         
